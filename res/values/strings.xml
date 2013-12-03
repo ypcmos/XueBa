@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">XueBa</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="copyright">Copyright© YP 2013</string>
+    <string name="menu_settings">Settings</string>
+	<string name="lremind">请输入终极密码</string>
+</resources>

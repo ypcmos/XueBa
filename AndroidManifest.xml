@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yp.xueba"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="10" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> 
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/> 
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/> 
+    <uses-permission android:name="android.permission.WAKE_LOCK"/> 
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS"></uses-permission>
+  	<uses-permission android:name="android.permission.RECEIVE_SMS"></uses-permission>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.yp.xueba.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service android:name=".XBService">
+        	<intent-filter>
+           		<action android:name="com.yp.xueba.XB"/>
+            	<category android:name="android.intent.category.default" />
+        	</intent-filter>
+    </service>
+    <receiver  android:name="com.yp.xueba.AlarmReceiver" >  
+    	<intent-filter>  
+        	<action android:name="arui.alarm.action"/>  
+    	</intent-filter>  
+	</receiver>  
+    </application>
+    
+</manifest>
